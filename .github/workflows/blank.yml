@@ -8,6 +8,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   build:
@@ -24,8 +26,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-# Only run the job when the GitHub actor is 'aqeeleurus'
+  # Only run the job when the GitHub actor is 'aqeeleurus'
   permissions:
-    id-token: write
     contents: read
   if: github.actor == 'aqeeleurus'
